@@ -10,5 +10,9 @@ class Prova(models.Model):
 class Sala(models.Model):
     local = models.CharField(max_length=30)
     predio = models.CharField(max_length=30)
-    prova = models.ForeignKey(Concurso)
+    prova = models.ForeignKey(Prova)
     numero = models.IntegerField()
+
+class Fiscal(models.Model):
+    salas = models.ManyToManyField(Sala)
+    usuario = models.OneToOneField(User)
