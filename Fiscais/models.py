@@ -16,3 +16,10 @@ class Sala(models.Model):
 class Fiscal(models.Model):
     salas = models.ManyToManyField(Sala)
     usuario = models.OneToOneField(User)
+
+    def __unicode__(self):
+        """ Mostrar o nome do objeto """
+        return '%s' %(self.salas)
+        
+    class Admin (admin.ModelAdmin):
+        list_display = ('salas',)
