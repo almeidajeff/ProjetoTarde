@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 # Django settings for ProjetoTarde project.
 
 DEBUG = True
