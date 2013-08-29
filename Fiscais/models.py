@@ -12,6 +12,13 @@ class Sala(models.Model):
     predio = models.CharField(max_length=30)
     prova = models.ForeignKey(Prova)
     numero = models.IntegerField()
+    
+    def __unicode__(self):
+        """ Mostrar o nome do objeto """
+        return '%s' %(self.predio)
+        
+    class Admin (admin.ModelAdmin):
+        list_display = ('predio',)
 
 class Fiscal(models.Model):
     salas = models.ManyToManyField(Sala)
@@ -19,7 +26,7 @@ class Fiscal(models.Model):
 
     def __unicode__(self):
         """ Mostrar o nome do objeto """
-        return '%s' %(self.salas)
+        return '%s %s' %(self.usuarios,self.salas)
         
     class Admin (admin.ModelAdmin):
-        list_display = ('salas',)
+        list_display = ('usuarios','salas',)
