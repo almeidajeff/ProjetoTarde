@@ -7,3 +7,4 @@ from models import *
 #admin.site.register(Candidato)
 admin.site.register(Prova)
 admin.site.register(Sala)
+admin.site.register(Fiscal)

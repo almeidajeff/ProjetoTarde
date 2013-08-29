@@ -5,11 +5,15 @@ from django.template import Context
 from forms import *
 
 def lista(request):
-    fiscais = Fiscal.objects.all()
-    
-    for f in fiscais:
-        salas = f.salas
-        
+    obj_fiscais = Fiscal.objects.all()
+    fiscais = []
+    for f in obj_fiscais:
+        s = []
+        #import pdb;pdb.set_trace()
+        salas = f.salas.values()
+        for sl in salas:
+            s.append(sl)
+        fiscais.append({'fiscal':f.usuario.username,'salas':s})
     
     template = get_template('lista.html')
     variables = Context({
