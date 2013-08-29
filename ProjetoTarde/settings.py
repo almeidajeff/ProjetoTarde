@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 # Django settings for ProjetoTarde project.
 
 DEBUG = True
@@ -120,6 +121,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'concursos',
+    'fiscais',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
