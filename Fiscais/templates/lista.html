@@ -6,7 +6,12 @@
 	<ul>
 		{% for f in fiscais %}
 		<li>
-			{{fiscal.usuario.name}}
+			{{f.fiscal}}
+			<ul>
+			{% for s in f.salas %}
+				<li>{{s.local}} - {{s.predio}} - {{s.prova}} - {{s.numero}}</li>
+			{% endfor %}
+			</ul>
 		</li>
 		{% endfor %}
 	</ul>
