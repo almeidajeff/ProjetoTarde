@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Lista de Fiscais</h1>
+	{% if fiscais %}
+	<ul>
+		{% for f in fiscais %}
+		<li>
+			{{fiscal.usuario.name}}
+		</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+		<p>Nenhum fiscal cadastrado.</p>
+	{% endif %}
+{% endblock content %}		 
