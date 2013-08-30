@@ -128,6 +128,7 @@ INSTALLED_APPS = (
     'south',
     'concursos',
     'Fiscais',
+    'empresa',
 )
 
 # A sample logging configuration. The only tangible logging
