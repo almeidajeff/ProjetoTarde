@@ -17,4 +17,6 @@ urlpatterns = patterns('',
 
     url(r'^fiscais/',include('Fiscais.urls')),
     
+    url(r'^empresa/', include('empresa.urls')),
+    
 )
