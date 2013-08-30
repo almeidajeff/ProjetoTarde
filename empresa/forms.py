@@ -1,6 +1,6 @@
 from django import forms
 from .models import Funcionario
 
-class FuncionarioForm(form.ModelForm):
+class FuncionarioForm(forms.ModelForm):
     class Meta:
         model = Funcionario
